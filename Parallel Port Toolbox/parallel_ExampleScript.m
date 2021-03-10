@@ -6,7 +6,7 @@ fopen(parallel_port);
 
 %Cycle through 255 numbers
 for marker = 1:255
-   parallel_sendmarker(s,marker,1); %Sends the current marker 
+   parallel_sendmarker(parallel_port,marker,1); %Sends the current marker 
    tic; while toc < 1; end %1 second delay
 end
 
